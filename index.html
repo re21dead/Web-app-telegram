@@ -2,11 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Искусство в Крассовках</title>
 </head>
 <style>
-    *{
+    @import url('https://fgnts.gogleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -28,8 +30,8 @@
         margin-top: 50px;
         margin-bottom: 10px;
     }
-    img{
-        width: 70px;
+    img {
+        width: 100px;
         margin: 30px auto;
 
     }
@@ -81,7 +83,7 @@
 Отдельные кастомизации кроссовок стоят дороже всего гардероба владельца обуви. Со сникеров пишут картины и делают скульптуры, а к некоторым моделям относятся как к самостоятельному арт-объекту.</p>
     <button id="buy">Купить</button>
 </div>
-<form id="from">
+<form id="form">
     <input type="text" placeholder="Имя" id="user_name">
     <input type="text" placeholder="Email" id="user_email">
     <input type="text" placeholder="Телефон" id="user_phone">
@@ -98,7 +100,7 @@
      buy.addEventListener("click",() => {
          document.getElementById("main").style.display = "none";
          document.getElementById("form").style.display = "block";
-         document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " tg.initDataUnsafe.last_name;
+         document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " "+ tg.initDataUnsafe.last_name;
  });
 
          order.addEventListener("click",() => {
